@@ -11,9 +11,9 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl">E</span>
+            <span className="text-white font-bold text-xl">O</span>
           </div>
-          <span className="text-2xl font-bold text-gray-900">EcoShop</span>
+          <span className="text-2xl font-bold text-gray-900">Omar Shop</span>
         </div>
 
         {/* Desktop Navigation */}

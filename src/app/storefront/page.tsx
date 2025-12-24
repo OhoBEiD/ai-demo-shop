@@ -30,21 +30,30 @@ export default function StorefrontPage() {
     <div className="min-h-screen bg-gray-50">
       <Header />
 
-      {/* Hero Banner Section */}
+      {/* Hero Banner Section with Omar Shop Branding */}
       {banner && (
-        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-8 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-12 relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative z-10">
-            <div>
-              <h1 className="text-4xl font-bold mb-2">🎉 Summer Mega Sale</h1>
-              <p className="text-xl">Up to 50% off on selected items + Free Shipping!</p>
-              <button className="mt-4 px-6 py-2 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition">
-                Shop Now →
-              </button>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-8">
+              <h1 className="text-5xl font-extrabold mb-3 drop-shadow-lg">🏪 Omar Shop</h1>
+              <p className="text-2xl font-light mb-1">Your Trusted Shopping Destination</p>
+              <p className="text-lg text-blue-100">Quality Products • Best Prices • Fast Delivery</p>
+            </div>
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 max-w-3xl mx-auto">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="text-center md:text-left">
+                  <h2 className="text-3xl font-bold mb-2">🎉 Grand Opening Sale!</h2>
+                  <p className="text-xl">Up to 60% off on all categories + Free Shipping!</p>
+                </div>
+                <button className="px-8 py-3 bg-white text-indigo-600 rounded-xl font-bold hover:bg-gray-100 transition transform hover:scale-105 shadow-lg">
+                  Shop Now →
+                </button>
+              </div>
             </div>
             <button
               onClick={() => setBanner(false)}
-              className="text-white hover:text-gray-200 transition text-2xl"
+              className="absolute top-4 right-4 text-white hover:text-gray-200 transition text-3xl"
             >
               ✕
             </button>
@@ -59,7 +68,7 @@ export default function StorefrontPage() {
             <div className="flex-1 w-full relative">
               <input
                 type="text"
-                placeholder="Search products, brands, and more..."
+                placeholder="Search in Omar Shop - Products, brands, and more..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
@@ -100,9 +109,12 @@ export default function StorefrontPage() {
         </div>
       </div>
 
-      {/* Promotional Cards */}
+      {/* Omar Shop Features */}
       <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">Why Shop at Omar Shop?</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
               <div className="text-4xl mb-3">🚚</div>
@@ -156,19 +168,23 @@ export default function StorefrontPage() {
 
       {/* Product Grid */}
       <div className="py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+          <h2 className="text-3xl font-bold text-gray-900">Featured Products at Omar Shop</h2>
+          <p className="text-gray-600 mt-2">Discover our handpicked selection of quality products</p>
+        </div>
         <ProductGrid />
       </div>
 
-      {/* Featured Deals Banner */}
+      {/* Special Offers Banner */}
       <div className="bg-gradient-to-r from-orange-500 to-red-500 py-12 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="inline-block bg-white text-orange-600 px-4 py-1 rounded-full text-sm font-bold mb-4">
-                LIMITED TIME OFFER
+                OMAR SHOP EXCLUSIVE
               </div>
               <h2 className="text-4xl font-bold mb-4">Flash Sale! 🔥</h2>
-              <p className="text-xl mb-6 text-orange-100">Save up to 70% on trending items. Hurry, sale ends soon!</p>
+              <p className="text-xl mb-6 text-orange-100">Save up to 70% on trending items. Limited time offer!</p>
               <div className="flex gap-4">
                 <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-4 text-center">
                   <div className="text-3xl font-bold">08</div>
@@ -196,8 +212,8 @@ export default function StorefrontPage() {
       {/* Newsletter Section */}
       <div className="bg-indigo-600 py-12 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">📬 Subscribe to Our Newsletter</h2>
-          <p className="text-lg mb-6 text-indigo-100">Get the latest deals and exclusive offers straight to your inbox</p>
+          <h2 className="text-3xl font-bold mb-4">📬 Join Omar Shop Community</h2>
+          <p className="text-lg mb-6 text-indigo-100">Subscribe for exclusive deals, new arrivals, and special offers</p>
           <div className="flex gap-2 max-w-md mx-auto flex-col md:flex-row">
             <input
               type="email"
@@ -211,13 +227,16 @@ export default function StorefrontPage() {
         </div>
       </div>
 
-      {/* Trust Badges */}
+      {/* Omar Shop Trust Badges */}
       <div className="bg-white py-12 border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-900">Omar Shop - Trusted by Thousands</h2>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl mb-3">⭐</div>
-              <div className="text-2xl font-bold text-gray-900">4.8/5</div>
+              <div className="text-2xl font-bold text-gray-900">4.9/5</div>
               <p className="text-sm text-gray-600">Customer Rating</p>
             </div>
             <div>

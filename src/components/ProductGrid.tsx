@@ -88,17 +88,17 @@ export default function ProductGrid() {
         {/* Filter and Sort */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
           <div className="flex gap-2">
-            <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+            <button className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition">
               All Products
             </button>
-            <button className="px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-lg hover:border-indigo-600 transition">
+            <button className="px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-lg hover:border-orange-600 transition">
               Electronics
             </button>
-            <button className="px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-lg hover:border-indigo-600 transition">
+            <button className="px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-lg hover:border-orange-600 transition">
               Accessories
             </button>
           </div>
-          <select className="px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-700 hover:border-indigo-600 transition">
+          <select className="px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-700 hover:border-orange-600 transition">
             <option>Sort by: Latest</option>
             <option>Price: Low to High</option>
             <option>Price: High to Low</option>
@@ -120,7 +120,7 @@ export default function ProductGrid() {
 
         {/* Load More Button */}
         <div className="flex justify-center mt-12">
-          <button className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition">
+          <button className="px-8 py-3 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 transition">
             Load More Products
           </button>
         </div>

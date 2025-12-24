@@ -32,13 +32,13 @@ export default function StorefrontPage() {
 
       {/* Hero Banner Section with Omar Shop Branding */}
       {banner && (
-        <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-12 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-orange-600 via-orange-500 to-orange-400 text-white py-12 relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-8">
               <h1 className="text-5xl font-extrabold mb-3 drop-shadow-lg">🏪 Omar Shop</h1>
               <p className="text-2xl font-light mb-1">Your Trusted Shopping Destination</p>
-              <p className="text-lg text-blue-100">Quality Products • Best Prices • Fast Delivery</p>
+              <p className="text-lg text-orange-100">Quality Products • Best Prices • Fast Delivery</p>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 max-w-3xl mx-auto">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -46,7 +46,7 @@ export default function StorefrontPage() {
                   <h2 className="text-3xl font-bold mb-2">🎉 Grand Opening Sale!</h2>
                   <p className="text-xl">Up to 60% off on all categories + Free Shipping!</p>
                 </div>
-                <button className="px-8 py-3 bg-white text-indigo-600 rounded-xl font-bold hover:bg-gray-100 transition transform hover:scale-105 shadow-lg">
+                <button className="px-8 py-3 bg-white text-orange-600 rounded-xl font-bold hover:bg-gray-100 transition transform hover:scale-105 shadow-lg">
                   Shop Now →
                 </button>
               </div>
@@ -72,7 +72,7 @@ export default function StorefrontPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                className="w-full px-4 py-3 pl-12 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-indigo-500 transition"
+                className="w-full px-4 py-3 pl-12 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-orange-500 transition"
               />
               <svg className="w-6 h-6 text-gray-400 absolute left-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -80,7 +80,7 @@ export default function StorefrontPage() {
             </div>
             <button 
               onClick={handleSearch}
-              className="w-full md:w-auto px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition font-semibold">
+              className="w-full md:w-auto px-8 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition font-semibold">
               Search
             </button>
           </div>
@@ -97,7 +97,7 @@ export default function StorefrontPage() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold whitespace-nowrap transition ${
                   selectedCategory === category.id
-                    ? 'bg-indigo-600 text-white shadow-md'
+                    ? 'bg-orange-600 text-white shadow-md'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -150,7 +150,7 @@ export default function StorefrontPage() {
                 <select 
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500">
+                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500">
                   <option value="featured">Featured</option>
                   <option value="price-low">Price: Low to High</option>
                   <option value="price-high">Price: High to Low</option>
@@ -210,17 +210,17 @@ export default function StorefrontPage() {
       </div>
 
       {/* Newsletter Section */}
-      <div className="bg-indigo-600 py-12 text-white">
+      <div className="bg-orange-600 py-12 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">📬 Join Omar Shop Community</h2>
-          <p className="text-lg mb-6 text-indigo-100">Subscribe for exclusive deals, new arrivals, and special offers</p>
+          <p className="text-lg mb-6 text-orange-100">Subscribe for exclusive deals, new arrivals, and special offers</p>
           <div className="flex gap-2 max-w-md mx-auto flex-col md:flex-row">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-300"
             />
-            <button className="px-6 py-3 bg-indigo-900 hover:bg-indigo-950 rounded-lg font-semibold transition">
+            <button className="px-6 py-3 bg-orange-800 hover:bg-orange-900 rounded-lg font-semibold transition">
               Subscribe
             </button>
           </div>

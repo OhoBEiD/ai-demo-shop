@@ -74,7 +74,7 @@ export default function ProductCard({
         {/* Price */}
         <div className="mb-4">
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-indigo-600">${price.toFixed(2)}</span>
+            <span className="text-2xl font-bold text-orange-600">${price.toFixed(2)}</span>
             {originalPrice && (
               <span className="text-sm text-gray-500 line-through">${originalPrice.toFixed(2)}</span>
             )}
@@ -87,7 +87,7 @@ export default function ProductCard({
           className={`w-full py-2 rounded-lg font-semibold transition-all ${
             isAdded
               ? 'bg-green-500 text-white'
-              : 'bg-indigo-600 text-white hover:bg-indigo-700'
+              : 'bg-orange-600 text-white hover:bg-orange-700'
           }`}
         >
           {isAdded ? '✓ Added to Cart' : 'Add to Cart'}

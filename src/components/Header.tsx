@@ -13,7 +13,7 @@ export default function Header() {
           <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-xl">C</span>
           </div>
-          <span className="text-2xl font-bold text-gray-900">Carrouna Shop</span>
+          <span className="text-2xl font-bold text-gray-900">Omar Shop</span>
         </div>
 
         {/* Desktop Navigation */}

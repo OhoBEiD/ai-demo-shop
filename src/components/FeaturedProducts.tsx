@@ -13,7 +13,7 @@ export default function FeaturedProducts() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {products.map((product) => (
-        <div key={product.id} className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300 p-6 group">
+        <div key={product.id} className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300 p-6 group border border-orange-100">
           <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">
             {product.image}
           </div>
@@ -25,8 +25,8 @@ export default function FeaturedProducts() {
             <span className="text-gray-600 text-sm ml-2">({product.reviews} reviews)</span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-2xl font-bold text-indigo-600">{product.price}</span>
-            <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-200 font-medium">
+            <span className="text-2xl font-bold text-orange-600">{product.price}</span>
+            <button className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors duration-200 font-medium">
               Add to Cart
             </button>
           </div>

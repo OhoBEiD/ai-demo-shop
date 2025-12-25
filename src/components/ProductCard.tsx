@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 interface ProductCardProps {
   id: number
@@ -24,6 +25,7 @@ export default function ProductCard({
   onAddToCart,
 }: ProductCardProps) {
   const [isAdded, setIsAdded] = useState(false)
+  const [imageError, setImageError] = useState(false)
 
   const handleAddToCart = () => {
     setIsAdded(true)
@@ -37,13 +39,24 @@ export default function ProductCard({
     <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden">
       {/* Image Container */}
       <div className="relative bg-gray-100 h-64 overflow-hidden group">
-        <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-          <svg className="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" />
-          </svg>
-        </div>
+        {!imageError ? (
+          <Image
+            src={image}
+            alt={name}
+            fill
+            className="object-cover group-hover:scale-110 transition-transform duration-300"
+            onError={() => setImageError(true)}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+            <svg className="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" />
+            </svg>
+          </div>
+        )}
         {discount > 0 && (
-          <div className="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+          <div className="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold z-10">
             -{discount}%
           </div>
         )}
@@ -60,7 +73,9 @@ export default function ProductCard({
             {[...Array(5)].map((_, i) => (
               <svg
                 key={i}
-                className={`w-4 h-4 ${i < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-300'}`}
+                className={`w-4 h-4 ${
+                  i < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-300'
+                }`}
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >

@@ -11,6 +11,7 @@ const PRODUCTS = [
     originalPrice: 129.99,
     rating: 5,
     reviews: 324,
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop',
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const PRODUCTS = [
     originalPrice: 299.99,
     rating: 4,
     reviews: 156,
+    image: 'https://images.unsplash.com/photo-1592078615290-033ee584e267?w=500&h=500&fit=crop',
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const PRODUCTS = [
     originalPrice: 49.99,
     rating: 5,
     reviews: 89,
+    image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop',
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ const PRODUCTS = [
     originalPrice: 249.99,
     rating: 5,
     reviews: 512,
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop',
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ const PRODUCTS = [
     originalPrice: 59.99,
     rating: 4,
     reviews: 203,
+    image: 'https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500&h=500&fit=crop',
   },
   {
     id: 6,
@@ -51,6 +56,7 @@ const PRODUCTS = [
     originalPrice: 149.99,
     rating: 5,
     reviews: 445,
+    image: 'https://images.unsplash.com/photo-1595225476474-87563907a212?w=500&h=500&fit=crop',
   },
   {
     id: 7,
@@ -59,6 +65,7 @@ const PRODUCTS = [
     originalPrice: 179.99,
     rating: 4,
     reviews: 267,
+    image: 'https://images.unsplash.com/photo-1614624532983-4ce03382d63d?w=500&h=500&fit=crop',
   },
   {
     id: 8,
@@ -67,6 +74,43 @@ const PRODUCTS = [
     originalPrice: 39.99,
     rating: 5,
     reviews: 678,
+    image: 'https://images.unsplash.com/photo-1591290619762-c588f96b8c83?w=500&h=500&fit=crop',
+  },
+  {
+    id: 9,
+    name: 'Bluetooth Speaker',
+    price: 89.99,
+    originalPrice: 139.99,
+    rating: 5,
+    reviews: 432,
+    image: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&h=500&fit=crop',
+  },
+  {
+    id: 10,
+    name: 'Gaming Mouse',
+    price: 59.99,
+    originalPrice: 89.99,
+    rating: 4,
+    reviews: 298,
+    image: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=500&fit=crop',
+  },
+  {
+    id: 11,
+    name: 'LED Desk Lamp',
+    price: 44.99,
+    originalPrice: 69.99,
+    rating: 5,
+    reviews: 187,
+    image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&h=500&fit=crop',
+  },
+  {
+    id: 12,
+    name: 'Laptop Backpack',
+    price: 49.99,
+    originalPrice: 79.99,
+    rating: 4,
+    reviews: 356,
+    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop',
   },
 ]
 
@@ -112,7 +156,6 @@ export default function ProductGrid() {
             <ProductCard
               key={product.id}
               {...product}
-              image=""
               onAddToCart={handleAddToCart}
             />
           ))}

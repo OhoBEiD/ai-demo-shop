@@ -1,7 +1,7 @@
 'use client'
 
 import Header from '@/components/Header'
-import Hero from '@/components/Hero'
+import Hero from '@/components/HeroSection'
 import FeaturedProducts from '@/components/FeaturedProducts'
 import Features from '@/components/Features'
 import Newsletter from '@/components/Newsletter'

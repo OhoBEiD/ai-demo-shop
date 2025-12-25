@@ -1,4 +1,21 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
+
 export default function HeroSection() {
+  const router = useRouter()
+
+  const handleShopNow = () => {
+    router.push('/products')
+  }
+
+  const handleLearnMore = () => {
+    const featuresSection = document.getElementById('features')
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col md:flex-row items-center justify-between">
@@ -10,10 +27,16 @@ export default function HeroSection() {
             Discover our curated collection of high-quality products at unbeatable prices.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold hover:bg-orange-50 transition">
+            <button 
+              onClick={handleShopNow}
+              className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold hover:bg-orange-50 transition"
+            >
               Shop Now
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-orange-600 transition">
+            <button 
+              onClick={handleLearnMore}
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-orange-600 transition"
+            >
               Learn More
             </button>
           </div>

@@ -51,7 +51,7 @@ const PRODUCTS = [
   },
   {
     id: 4,
-    name: 'Smart Watch Pro',
+    name: 'Apple Watch Ultra',
     price: 199.99,
     originalPrice: 249.99,
     rating: 5,

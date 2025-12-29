@@ -33,7 +33,7 @@ const PRODUCTS = [
   },
   {
     id: 4,
-    name: 'Ergonomic Desk Chair',
+    name: 'Wooden Desk Chair',
     price: 199.99,
     originalPrice: 299.99,
     rating: 4,

@@ -18,7 +18,7 @@ export default function Header() {
                 <path d="M12 2l2.5 7.5H22l-6 4.5 2.5 7.5L12 17l-6.5 4.5L8 14 2 9.5h7.5z"/>
               </svg>
             </div>
-            <span className="text-xl font-bold text-gray-900">Geha Shop</span>
+            <span className="text-xl font-bold text-gray-900">ooo shop</span>
           </Link>
 
           {/* Desktop Navigation */}

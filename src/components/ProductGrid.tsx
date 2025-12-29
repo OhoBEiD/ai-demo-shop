@@ -15,6 +15,15 @@ const PRODUCTS = [
   },
   {
     id: 2,
+    name: 'Geha Laptop',
+    price: 299,
+    originalPrice: 349,
+    rating: 5,
+    reviews: 0,
+    image: '',
+  },
+  {
+    id: 3,
     name: 'Ergonomic Desk Chair',
     price: 199.99,
     originalPrice: 299.99,

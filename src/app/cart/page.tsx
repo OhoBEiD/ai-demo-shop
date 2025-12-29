@@ -15,7 +15,7 @@ interface CartItem {
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<CartItem[]>([
     { id: 1, name: 'Premium Wireless Headphones', price: 199.99, quantity: 1, image: 'placeholder' },
-    { id: 2, name: 'Smart Watch Pro', price: 349.99, quantity: 1, image: 'placeholder' },
+    { id: 2, name: 'Apple Watch Ultra', price: 349.99, quantity: 1, image: 'placeholder' },
   ]);
 
   const updateQuantity = (id: number, quantity: number) => {

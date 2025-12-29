@@ -15,7 +15,7 @@ const PRODUCTS = [
   },
   {
     id: 2,
-    name: 'Geha Laptop',
+    name: 'Omar Laptop',
     price: 299,
     originalPrice: 349,
     rating: 5,
